@@ -1,3 +1,6 @@
+import json;
+
+
 user = {
     "name": "Guru",
     "skills": ["Java", "Python", "AI"],
@@ -7,6 +10,14 @@ user = {
         "phone": 9677597321
         }
     }
+# converts dict -> json string
+json_data = json.dumps(user);
+print(json_data);
+
+
+jsonToDict = json.loads(json_data);
+
+print(jsonToDict);
 
 
 print(user["contact"]["email"]);
