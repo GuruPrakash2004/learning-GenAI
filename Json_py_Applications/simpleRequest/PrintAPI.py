@@ -5,4 +5,4 @@ load_dotenv()
 
 api_key = os.getenv("GitHub_API");
 
-print(api_key);
+print(api_key)
