@@ -1,4 +1,4 @@
-def ask_llmAI(client):
+def AI_ChatHandeler(client):
     chat = client.chats.create(
         model="gemini-3.6-flash",
         config = {
