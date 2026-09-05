@@ -1,6 +1,6 @@
 def AI_ChatHandeler(client):
-    chat = client.chats.create(
-        model="gemini-3.6-flash",
+    chat =  client.aio.chats.create(
+        model="gemini-3.7-flash",
         config = {
         "system_instruction": """
         You are a professional softwate support assistant.

@@ -4,11 +4,12 @@ from google import genai
 from generateText import chatResponceHandeler
 from ask_llm import AI_ChatHandeler
 from responceData import responceData
+import asyncio
 
 
 load_dotenv()
 
-def main():
+async def main():
 # get the key from env
     api_key = os.getenv("GEMINI_API_KEY")
 # create the client 
@@ -18,7 +19,7 @@ def main():
     # Question input
     myinput = str(input("enter your querry: "));
 
-    response1 =  responceData(chat,myinput)
+    response1 =await  responceData(chat,myinput)
 
     print("-" * 60)
     print("\nQ1:")
@@ -28,7 +29,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
 
 
 
